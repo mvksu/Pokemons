@@ -2,10 +2,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
     background-color: rgb(244, 245, 248);
+    transition-duration: 0.3s;
+}
+
+body.dark-theme {
+    background-color: #212121;
+}
+
+body.dark-theme div .panel, body.dark-theme h2{
+    color: white;
+}
+body.dark-theme div .panel .box{
+    background-color: #424242;
+}
+body.dark-theme div .panel .box, body.dark-theme select, body.dark-theme input, body.dark-theme .pokemon, body.dark-theme button{
+    background-color: #424242;
+    color: white;
 }
 
 .panel {
@@ -45,13 +62,17 @@ body {
     border: none;
 }
 
+.searchBar:focus {
+    outline: 1.5px solid rgb(135, 175, 245);
+}
+
 .searchBar:hover {
     border: 1px solid rgb(135, 175, 245);
 }
 
 .filter {
     width: 19%;
-    height: 130px;
+    height: 30px;
 }
 
 .list {
@@ -70,6 +91,7 @@ body {
     height: 175px;
     background-color: white;
     cursor: pointer;
+    border-radius: 5px;
 }
 .pokemon:hover {
     border: 1px solid rgb(135, 175, 245);
@@ -83,4 +105,49 @@ body {
 h2 {
     text-align: center;
 }
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+.detail {
+    padding: 5rem 10rem;
+    width: 100%;
+    height: 500px;
+}
+
+.detail .title {
+    color: white;
+    text-align: center;
+    margin: 35px 0;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.dark-theme .image {
+    background-color: #474747;
+}
+
+.stats {
+    margin: 0 15px;
+}
+
+body.dark-theme .stats {
+    color: white;
+}
+
+.image {
+    background-color: white;
+    border-radius: 5px;
+    width: 50%;
+}
+.image img {
+    width: 100%;
+}
+
 

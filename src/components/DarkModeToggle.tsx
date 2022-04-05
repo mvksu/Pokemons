@@ -1,8 +1,14 @@
+import { useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa"
 
 const DarkModeToggle = () => {
-    return <div className="box">
-        <FaMoon />
+    const [darkmode, setDarmode] = useState(true)
+
+    return <div className="box" onClick={() => {
+        document.body.classList.toggle('dark-theme')
+        setDarmode(!darkmode)
+    }}>
+        {darkmode ? <FaSun /> : <FaMoon />}
     </div>
 }
 

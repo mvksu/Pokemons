@@ -12,7 +12,6 @@ export type ActionTypes = | { type: "SET_POKEMONS", payload: Pokemon[] } | { typ
 export const startLoading = (): ActionTypes => ({ type: "START_LOADING" })
 export const searchByValue = (searchValue: string): ActionTypes => ({ type: "SEARCH_BY_VALUE", payload: searchValue })
 export const filterByValue = (filterValue: string): ActionTypes => ({ type: "FILTER_BY_VALUE", payload: filterValue })
-
 export const setPokemons = (pokemons: Pokemon[]): ActionTypes => ({
     type: SET_POKEMONS,
     payload: pokemons,

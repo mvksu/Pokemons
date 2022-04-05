@@ -1,8 +1,5 @@
 
-export interface Pokemon {
-    
-}
-
+export type Pokemon = {} | any
 
 export interface PokemonState {
     pokemons: Pokemon[]
